@@ -11,22 +11,23 @@ namespace BankAccount
         //fields
 
         //properties
-        public double AccountBalance { get; set; }
-        public int AccountNum { get; set; }
+        public double AcctBalance { get; set; }
+        public double AcctDeposit { get; set; }
+        public double AcctWithdraw { get; set; }
 
 
+        public Account()
+        {
+            //
+        }
 
-        //constructor
-        //public BankAccount()
-        //{
-        //    //default 
-        //}
-
-        //public BankAccount(double accountBalance, int accountNum)
-        //{
-        //    AccountBalance = accountBalance;
-        //    AccountNum = accountNum; 
-        //}
+        public Account (double acctBalance, double acctDeposit, double acctWithdraw)
+        {
+            AcctBalance = acctBalance;
+            AcctDeposit = acctDeposit;
+            AcctWithdraw = acctWithdraw;
+        }
+   
 
 
         public abstract void DoSomething();

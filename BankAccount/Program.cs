@@ -11,12 +11,17 @@ namespace BankAccount
         static void Main(string[] args)
         {
             int bankInput;
+            string depositInput;
+            string balanceInput;
+            string withdrawInput;
 
-            SavingsAccount newSavings = new SavingsAccount( );
-            CheckingAccount newChecking = new CheckingAccount();
-            Client newClient = new Client();
+            SavingsAccount newSavings = new SavingsAccount(10000, 98765);
+            CheckingAccount newChecking = new CheckingAccount(5000.00, 12345);
+            Client newClient = new Client("Jane", "Doe");
 
 
+            Console.WriteLine("Welcome to the Bank");
+            Console.WriteLine();
 
             do
             {
@@ -28,6 +33,7 @@ namespace BankAccount
                 Console.WriteLine("3. Deposit Funds");
                 Console.WriteLine("4. Withdraw Funds");
                 Console.WriteLine("5. Exit");
+                Console.WriteLine();
 
                 bankInput = int.Parse(Console.ReadLine());
 
@@ -36,30 +42,34 @@ namespace BankAccount
                 switch (bankInput)
                 {
                     case 1:
-                        //method
+                        newClient.Info();
                         break;
                     case 2:
-                        //method
+                        Console.WriteLine("Which account would you like to check the balance for?");
+                        Console.WriteLine("Press A for checking account");
+                        Console.WriteLine("Press B for savings account");
+                        balanceInput = Console.ReadLine();
                         break;
+
+
                     case 3:
-                        //methos=d
+                        Console.WriteLine("Which account would you like to add money to?");
+                        Console.WriteLine("Press A for checking account");
+                        Console.WriteLine("Press B for savings account");
+                        depositInput = Console.ReadLine();      
                         break;
+
+
                     case 4:
-                        //method
+                        Console.Write("Which account would you like to remove money from?");
+                        Console.WriteLine("Press A for checking account");
+                        Console.WriteLine("Press B for savings account");
+                        withdrawInput = Console.ReadLine();
                         break;
-                    case 5:
-                        //method
-                        break;
+
                 }
-
-                //client info
-                newClient.Info();
-
-
-              
-                
-
             } while (bankInput != 5);
+            Console.WriteLine("Thank you for using Bank.");
         }
     }
 }

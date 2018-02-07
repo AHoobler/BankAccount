@@ -19,7 +19,7 @@ namespace BankAccount
             //
         }
 
-        public Client(string fName, string lName, bool memberStatus)
+        public Client(string fName, string lName)
         {
             this.fName = fName;
             this.lName = lName;
@@ -30,7 +30,8 @@ namespace BankAccount
         //1 method
         public void Info()
         {
-            Console.WriteLine("dumb");
+            Console.WriteLine("Client Name: " + fName + " " + lName );
+            Console.WriteLine();
         }
     }
 }

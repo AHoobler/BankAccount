@@ -30,11 +30,17 @@ namespace BankAccount
             //
         }
 
-        public double Deposit()
+        public SavingsAccount(int sAcctNum, double sAcctBal)
         {
-            return sAcctBal
+            SAcctBal = sAcctBal;
+            SAcctNum = sAcctNum;
         }
 
+
+        public override void DoSomething()
+        {
+
+        }
 
     }
 }
