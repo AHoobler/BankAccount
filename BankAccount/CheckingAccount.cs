@@ -11,7 +11,7 @@ namespace BankAccount
 
 
 
-        public double CAcctBal { get; set; }
+        public bool CAcctBal { get; set; }
         public int CAcctNum { get; set; }
 
         public CheckingAccount()
@@ -19,7 +19,7 @@ namespace BankAccount
             //
         }
 
-        public CheckingAccount(double cAcctBal, int cAcctNum)
+        public CheckingAccount(bool cAcctBal, int cAcctNum)
         {
             CAcctBal = cAcctBal;
             CAcctNum = cAcctNum;

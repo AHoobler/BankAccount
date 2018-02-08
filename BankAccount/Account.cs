@@ -28,9 +28,21 @@ namespace BankAccount
             AcctWithdraw = acctWithdraw;
         }
    
+        public virtual void CheckBal()
+        {
+            Console.WriteLine("Your account balance is" + AcctBalance);
+        }
+
+        public virtual void DoDeposit()
+        {
+            Console.WriteLine("You have made a deposit.");
+            Console.WriteLine("Your account balance is now: " + (AcctBalance - AcctDeposit));
+        }
 
 
-        public abstract void DoSomething();
+
+
+        //public abstract void DoSomething();
 
 
     }

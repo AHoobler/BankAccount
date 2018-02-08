@@ -11,7 +11,7 @@ namespace BankAccount
         // must have minimum balance 
 
         private int sAcctNum;
-        private double sAcctBal;
+        private bool sAcctBal;
         
         public int SAcctNum
         {
@@ -19,7 +19,7 @@ namespace BankAccount
             set { this.sAcctNum = value; }
         }
 
-        public double SAcctBal
+        public bool SAcctBal
         {
             get { return this.sAcctBal; }
             set { this.sAcctBal = value; }
@@ -30,17 +30,19 @@ namespace BankAccount
             //
         }
 
-        public SavingsAccount(int sAcctNum, double sAcctBal)
+        public SavingsAccount(int sAcctNum, bool sAcctBal)
         {
             SAcctBal = sAcctBal;
             SAcctNum = sAcctNum;
         }
 
 
-        public override void DoSomething()
-        {
 
-        }
+
+        //public override void DoSomething()
+        //{
+
+        //}
 
     }
 }
